@@ -1,0 +1,184 @@
+/* Основные стили для страницы Контакты */
+.contacts {
+    padding: 80px 20px;
+    background-color: #0d0d0d;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.1), transparent);
+    animation: shine 5s infinite;
+}
+
+.contacts__header {
+    margin-bottom: 50px;
+}
+
+.contacts__title {
+    font-size: 48px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.contacts__description {
+    font-size: 18px;
+    color: #00bfff;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contacts__info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contacts__block {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts__block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.4);
+}
+
+.contacts__icon {
+    font-size: 40px;
+    color: #00bfff;
+    margin-bottom: 20px;
+}
+
+.contacts__block-title {
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.contacts__block-description {
+    font-size: 16px;
+    color: #00bfff;
+    line-height: 1.5;
+}
+
+/* Форма обратной связи */
+.contacts__form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+}
+
+.contacts__form input,
+.contacts__form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #00bfff;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    color: #00bfff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts__form input::placeholder,
+.contacts__form textarea::placeholder {
+    color: #0077ff;
+}
+
+.contacts__form input:focus,
+.contacts__form textarea:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    outline: none;
+}
+
+.contacts__form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contacts__form button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(145deg, #00bfff, #0077ff);
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts__form button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+}
+
+/* Анимации */
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Стили для социальных сетей в блоке контактов */
+.contacts__socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contacts__social-link {
+    font-size: 24px;
+    color: #00bfff;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacts__social-link:hover {
+    transform: translateY(-5px);
+}
+
+.contacts__social-link.fa-vk:hover {
+    color: #4a76a8; /* Цвет ВКонтакте */
+}
+
+.contacts__social-link.fa-telegram:hover {
+    color: #0088cc; /* Цвет Telegram */
+}
+
+.contacts__social-link.fa-instagram:hover {
+    color: #e4405f; /* Цвет Instagram */
+}
+
+.contacts__social-link.fa-github:hover {
+    color: #ffffff; /* Цвет GitHub */
+}
