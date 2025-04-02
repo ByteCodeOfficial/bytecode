@@ -2802,3 +2802,301 @@ main {
     background: #00bfff;
     color: #0d0d0d;
 }
+
+/* news.css - общие стили для новостей */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.news-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 191, 255, 0.2);
+}
+
+.news-card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card-image img {
+    transform: scale(1.1);
+}
+
+.news-card-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 15px;
+    background: rgba(0, 191, 255, 0.8);
+    color: #0d0d0d;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.news-card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card-date {
+    font-size: 14px;
+    color: #00bfff;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.news-card-title {
+    font-size: 20px;
+    color: #00bfff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.news-card-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-card-title a:hover {
+    color: #0077ff;
+}
+
+.news-card-excerpt {
+    font-size: 16px;
+    color: #00bfff;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.news-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.news-card-views {
+    font-size: 14px;
+    color: #00bfff;
+    opacity: 0.7;
+}
+
+.news-card-read-more {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.news-card-read-more:hover {
+    color: #0077ff;
+}
+
+.news-card-read-more i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.news-card-read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* Стили для контейнера кнопки */
+.news-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.news-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00bfff, transparent);
+    opacity: 0.3;
+}
+
+/* Обновленные стили для кнопки */
+.news-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid #00bfff;
+    border-radius: 50px;
+    color: #00bfff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.1);
+}
+
+.news-all-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.news-all-link:hover {
+    background: linear-gradient(145deg, #00bfff, #0077ff);
+    color: #0d0d0d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(0, 191, 255, 0.4);
+    border-color: transparent;
+}
+
+.news-all-link:hover::before {
+    left: 100%;
+}
+
+.news-all-link i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.news-all-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .news-footer {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+    
+    .news-all-link {
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-all-link {
+        padding: 8px 20px;
+        font-size: 14px;
+        gap: 8px;
+    }
+}
+
+/* Стили заголовка секции (как у Видеоуроков) */
+.tutorials__header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 0 20px;
+}
+
+.tutorials__title {
+    font-size: 48px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00bfff;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.tutorials__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #00bfff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+.tutorials__description {
+    font-size: 18px;
+    color: #00bfff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tutorials__header {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .tutorials__title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tutorials__title {
+        font-size: 36px;
+    }
+    .tutorials__description {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorials__title {
+        font-size: 30px;
+    }
+    .tutorials__title::after {
+        bottom: -10px;
+        width: 60px;
+    }
+}
