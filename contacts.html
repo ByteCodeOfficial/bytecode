@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="registration.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+    
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ByteCode Logo">
+            </a>
+        </div>
+        <div class="navbar__links" id="navbar-links">
+            <a href="#">IT-новости</a>
+            <a href="#">Видеоуроки</a>
+            <a href="#">Магазин</a>
+        </div>
+    </nav>
+    
+<!-- Бургер-меню -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__content">
+        <a href="#">IT-новости</a>
+        <a href="#">Видеоуроки</a>
+        <a href="#">Магазин</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+        <button class="btn btn-login">Вход</button>
+        <button class="btn btn-register">Регистрация</button>
+    </div>
+</div>
+
+
+    <!-- Основной контент -->
+    <main class="content">
+        <!-- Раздел Контакты -->
+        <section class="contacts">
+            <div class="contacts__header">
+                <h2 class="contacts__title">Контакты</h2>
+                <p class="contacts__description">
+                    Свяжитесь с нами через социальные сети или напишите нам сообщение. Мы всегда рады помочь!
+                </p>
+            </div>
+            <div class="contacts__info">
+                <!-- Социальные сети -->
+                <div class="contacts__block">
+                    <div class="contacts__icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="contacts__block-title">Социальные сети</h3>
+                    <div class="contacts__socials">
+                        <a href="#" class="contacts__social-link" title="ВКонтакте">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="contacts__social-link" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="contacts__social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="contacts__social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Телефон -->
+                <!-- <div class="contacts__block">
+                    <div class="contacts__icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="contacts__block-title">Телефон</h3>
+                    <p class="contacts__block-description">
+                        +7 (920) 752-17-82
+                    </p>
+                </div> -->
+                <!-- Email -->
+                <div class="contacts__block">
+                    <div class="contacts__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contacts__block-title">Email</h3>
+                    <p class="contacts__block-description">
+                        connovtema@yandex.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <form class="contacts__form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+<!-- Футер -->
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <button class="footer__scroll-top" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <div class="footer__center">
+        <h3>Информация</h3>
+        <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="footer__right">
+        <h3>Социальные сети</h3>
+        <div class="footer__socials">
+            <a href="#" class="social-link" title="ВКонтакте">
+                <i class="fab fa-vk"></i>
+            </a>
+            <a href="#" class="social-link" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

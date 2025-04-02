@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="registration.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+    
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ByteCode Logo">
+            </a>
+        </div>
+        <div class="navbar__links" id="navbar-links">
+            <a href="#">IT-новости</a>
+            <a href="#">Видеоуроки</a>
+            <a href="#">Магазин</a>
+        </div>
+    </nav>
+    
+<!-- Бургер-меню -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__content">
+        <a href="#">IT-новости</a>
+        <a href="#">Видеоуроки</a>
+        <a href="#">Магазин</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+        <button class="btn btn-login">Вход</button>
+        <button class="btn btn-register">Регистрация</button>
+    </div>
+</div>
+
+
+    <!-- Основной контент -->
+    <main class="content">
+        <!-- Раздел О нас -->
+        <section class="about">
+            <div class="about__header">
+                <h2 class="about__title">О нас</h2>
+                <p class="about__description">
+                    Добро пожаловать на сайт ByteCode! Меня зовут Артём, и я занимаюсь программированием уже более 2 лет. Здесь я делюсь своими знаниями, проектами и опытом в мире IT.
+                </p>
+            </div>
+            <div class="about__content">
+                <!-- Блок о навыках -->
+                <div class="about__block">
+                    <div class="about__icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="about__block-title">Мои навыки</h3>
+                    <p class="about__block-description">
+                        Я занимаюсь веб-разработкой, созданием ботов и работаю с такими языками программирования, как Python, JavaScript и  Go. Постоянно изучаю новые технологии и не только...
+                    </p>
+                </div>
+                <!-- Блок об опыте -->
+                <div class="about__block">
+                    <div class="about__icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="about__block-title">Мой опыт</h3>
+                    <p class="about__block-description">
+                        За время своей практики я создал множество проектов - от небольших ботов до сайтов и игр.
+                    </p>
+                </div>
+                <!-- Блок о проектах -->
+                <div class="about__block">
+                    <div class="about__icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="about__block-title">Мои проекты</h3>
+                    <p class="about__block-description">
+                        Среди моих работ - игры на Python (Wordle) и этот сайт "ByteCode". Каждый проект для меня -  это новый вызов и возможность для развития навыков.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Футер -->
+<footer class="footer">
+    <div class="footer__left">
+        <div class="footer__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <button class="footer__scroll-top" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+    <div class="footer__center">
+        <h3>Информация</h3>
+        <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="footer__right">
+        <h3>Социальные сети</h3>
+        <div class="footer__socials">
+            <a href="#" class="social-link" title="ВКонтакте">
+                <i class="fab fa-vk"></i>
+            </a>
+            <a href="#" class="social-link" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
