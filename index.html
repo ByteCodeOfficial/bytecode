@@ -23,8 +23,8 @@
         </div>
         <nav class="header__nav" id="header-nav">
             <div class="header__links">
-                <a href="404.html">О нас</a>
-                <a href="404.html">Контакты</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
             </div>
             <div class="header__buttons">
                 <a href="404.html" class="btn btn-login">Вход</a>
@@ -52,8 +52,8 @@
         <a href="404.html">IT-новости</a>
         <a href="404.html">Видеоуроки</a>
         <a href="404.html">Магазин</a>
-        <a href="404.html">О нас</a>
-        <a href="404.html">Контакты</a>
+        <a href="about.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
         <button class="btn btn-login">Вход</button>
         <button class="btn btn-register">Регистрация</button>
     </div>
@@ -86,62 +86,77 @@
         </section>
 
         <!-- Раздел IT-новости -->
-        <section class="news">
-            <div class="news__header">
-                <h2 class="news__title">IT-новости</h2>
-                <p class="news__description">
+        <section class="news-section">  
+            <div class="tutorials__header">
+                <h2 class="tutorials__title">IT-новости</h2>
+                <p class="tutorials__description">
                     Самые свежие и интересные новости из мира технологий. Будь в курсе последних событий!
                 </p>
             </div>
-            <div class="news__articles">
+            <div class="news-grid">
                 <!-- Статья 1 -->
-                <article class="news__article">
-                    <div class="news__image">
-                        <img src="https://avatars.mds.yandex.net/i?id=1b3e5d70e43f5402c67dab7a70969475a552168f-6554395-images-thumbs&n=13" alt="Новость 1">
+                <article class="news-card"> 
+                    <div class="news-card-image">  
+                        <img src="https://avatars.mds.yandex.net/i?id=3c5f08d0127767572a8fb5271e5eaff69c95274e-5339410-images-thumbs&n=13" alt="ИИ в медицине">
+                        <span class="news-card-category">ИИ</span>  
                     </div>
-                    <div class="news__content">
-                        <h3 class="news__article-title">
-                            <a href="404.html">1 статья</a>
+                    <div class="news-card-content">  
+                        <h3 class="news-card-title">  
+                            <a href="404.html">ИИ научился диагностировать редкие заболевания</a>
                         </h3>
-                        <time class="news__date" datetime="2023-10-01">1 января 2025</time>
-                        <p class="news__article-description">
-                            Как ИИ меняет подход к диагностике и лечению заболеваний.
+                        <time class="news-card-date" datetime="2023-11-15">15 ноября 2023</time>  
+                        <p class="news-card-excerpt">  
+                            Новый алгоритм на основе глубокого обучения способен выявлять редкие генетические заболевания с точностью 98%, анализируя медицинские снимки.
                         </p>
+                        <div class="news-card-footer">  
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.2K</span>  
+                            <a href="404.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>  
+                        </div>
                     </div>
                 </article>
                 <!-- Статья 2 -->
-                <article class="news__article">
-                    <div class="news__image">
-                        <img src="https://avatars.mds.yandex.net/i?id=1b3e5d70e43f5402c67dab7a70969475a552168f-6554395-images-thumbs&n=13" alt="Новость 2">
+                <article class="news-card"> 
+                    <div class="news-card-image">  
+                        <img src="https://avatars.mds.yandex.net/i?id=3c5f08d0127767572a8fb5271e5eaff69c95274e-5339410-images-thumbs&n=13" alt="ИИ в медицине">
+                        <span class="news-card-category">ИИ</span>  
                     </div>
-                    <div class="news__content">
-                        <h3 class="news__article-title">
-                            <a href="404.html">Квантовые компьютеры: будущее уже здесь</a>
+                    <div class="news-card-content">  
+                        <h3 class="news-card-title">  
+                            <a href="404.html">ИИ научился диагностировать редкие заболевания</a>
                         </h3>
-                        <time class="news__date" datetime="2023-09-25">1 января 2025</time>
-                        <p class="news__article-description">
-                            Новые достижения в области квантовых вычислений.
+                        <time class="news-card-date" datetime="2023-11-15">15 ноября 2023</time>  
+                        <p class="news-card-excerpt">  
+                            Новый алгоритм на основе глубокого обучения способен выявлять редкие генетические заболевания с точностью 98%, анализируя медицинские снимки.
                         </p>
+                        <div class="news-card-footer">  
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.2K</span>  
+                            <a href="404.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>  
+                        </div>
                     </div>
                 </article>
                 <!-- Статья 3 -->
-                <article class="news__article">
-                    <div class="news__image">
-                        <img src="https://avatars.mds.yandex.net/i?id=1b3e5d70e43f5402c67dab7a70969475a552168f-6554395-images-thumbs&n=13" alt="Новость 3">
+                <article class="news-card"> 
+                    <div class="news-card-image">  
+                        <img src="https://avatars.mds.yandex.net/i?id=3c5f08d0127767572a8fb5271e5eaff69c95274e-5339410-images-thumbs&n=13" alt="ИИ в медицине">
+                        <span class="news-card-category">ИИ</span>  
                     </div>
-                    <div class="news__content">
-                        <h3 class="news__article-title">
-                            <a href="404.html">Кибербезопасность в 2025 году</a>
+                    <div class="news-card-content">  
+                        <h3 class="news-card-title">  
+                            <a href="404.html">ИИ научился диагностировать редкие заболевания</a>
                         </h3>
-                        <time class="news__date" datetime="2023-09-15">1 января 2025</time>
-                        <p class="news__article-description">
-                            Основные тренды и угрозы в мире кибербезопасности.
+                        <time class="news-card-date" datetime="2023-11-15">15 ноября 2023</time>  
+                        <p class="news-card-excerpt">  
+                            Новый алгоритм на основе глубокого обучения способен выявлять редкие генетические заболевания с точностью 98%, анализируя медицинские снимки.
                         </p>
+                        <div class="news-card-footer">  
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.2K</span>  
+                            <a href="404.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>  
+                        </div>
                     </div>
                 </article>
             </div>
-            <div class="news__footer">
-                <a href="404.html" class="news__button">Все статьи</a>
+            <div class="news-footer">  <!-- Новый контейнер для кнопки -->
+                <a href="404.html" class="news-all-link">Все новости <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
 
@@ -338,8 +353,8 @@
         <div class="footer__center">
             <h3>Информация</h3>
             <ul>
-                <li><a href="404.html">О нас</a></li>
-                <li><a href="404.html">Контакты</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </div>
         <div class="footer__right">
