@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | ByteCode</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="registration.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="registration">
+        <div class="registration__container">
+            <div class="registration__left">
+                <div class="registration__hero">
+                    <h1 class="registration__title">Присоединяйся к <span>ByteCode</span></h1>
+                    <p class="registration__subtitle">Стань частью IT-сообщества и получи доступ к эксклюзивным материалам</p>
+                    
+                    <div class="registration__benefits">
+                        <div class="registration__benefit">
+                            <i class="fas fa-code"></i>
+                            <span>Доступ к исходным кодам</span>
+                        </div>
+                        <div class="registration__benefit">
+                            <i class="fas fa-video"></i>
+                            <span>Эксклюзивные видеоуроки</span>
+                        </div>
+                        <div class="registration__benefit">
+                            <i class="fas fa-users"></i>
+                            <span>Сообщество разработчиков</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration__particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+            
+            <div class="registration__right">
+                <form class="registration__form" id="registration-form">
+                    <h2 class="form__title">Создать аккаунт</h2>
+                    
+                    <div class="form__socials">
+                        <a href="#" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </a>
+                        <a href="#" class="social-btn github">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                    
+                    <div class="form__divider">
+                        <span>или</span>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="username">Имя пользователя</label>
+                        <div class="input__container">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="username" name="username" required placeholder="Введите имя пользователя">
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <div class="input__container">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="password">Пароль</label>
+                        <div class="input__container">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" required placeholder="Введите пароль">
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                            <div class="strength-bar"></div>
+                            <span class="strength-text">Надежность пароля: <span>слабый</span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="confirm-password">Подтвердите пароль</label>
+                        <div class="input__container">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Подтвердите пароль">
+                        </div>
+                    </div>
+                    
+                    <div class="form__terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">Я согласен с <a href="#">Условиями использования</a> и <a href="#">Политикой конфиденциальности</a></label>
+                    </div>
+                    
+                    <button type="submit" class="form__submit">Зарегистрироваться</button>
+                    
+                    <div class="form__login">
+                        Уже есть аккаунт? <a href="login.html">Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="ByteCode Logo">
+                    <span>ByteCode</span>
+                </a>
+            </div>
+            <button class="footer__scroll-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer__center">
+            <h3>Информация</h3>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__right">
+            <h3>Социальные сети</h3>
+            <div class="footer__socials">
+                <a href="https://vk.com/bytecode_official" class="social-link" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/bytecode_official" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://dzen.ru/bytecode_official" class="social-link" title="Дзен">
+                    <i class="fab fa-yandex"></i>
+                </a>
+                <a href="https://github.com/ByteCodeOfficial" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/registration.js"></script>
+</body>
+</html>
