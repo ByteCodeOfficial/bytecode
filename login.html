@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login active">Вход</a>
+                <a href="register.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Бургер-меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <a href="404.html">IT-новости</a>
+            <a href="404.html">Видеоуроки</a>
+            <a href="404.html">Магазин</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="login.html" class="btn btn-login active">Вход</a>
+            <a href="register.html" class="btn btn-register">Регистрация</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="login-content">
+        <!-- Анимированный фон -->
+        <div class="login-bg">
+            <div class="login-particle"></div>
+            <div class="login-particle"></div>
+            <div class="login-particle"></div>
+            <div class="login-particle"></div>
+            <div class="login-particle"></div>
+        </div>
+        
+        <!-- Форма входа -->
+        <section class="login-form">
+            <div class="login-form__header">
+                <h1 class="login-form__title">Вход в <span>ByteCode</span></h1>
+                <p class="login-form__subtitle">Войдите в свой аккаунт, чтобы получить доступ ко всем возможностям</p>
+            </div>
+
+            <form class="login-form__container">
+                <!-- Сообщение об ошибке -->
+                <div class="login-error" id="login-error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Неверный email или пароль</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-email" class="form-label">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="login-email" name="email" class="form-input" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password" class="form-label">Пароль</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="login-password" name="password" class="form-input" required>
+                        <i class="fas fa-lock input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="password-actions">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span class="checkmark"></span>
+                            Запомнить меня
+                        </label>
+                        <a href="forgot-password.html" class="forgot-password">Забыли пароль?</a>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Войти</button>
+                </div>
+
+                <div class="social-login">
+                    <p class="social-login__title">Или войдите через</p>
+                    <div class="social-login__buttons">
+                        <a href="#" class="social-btn vk">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-btn github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <p>Ещё нет аккаунта? <a href="register.html" class="form-link">Зарегистрироваться</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="ByteCode Logo">
+                    <span>ByteCode</span>
+                </a>
+            </div>
+            <button class="footer__scroll-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer__center">
+            <h3>Информация</h3>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__right">
+            <h3>Социальные сети</h3>
+            <div class="footer__socials">
+                <a href="https://vk.com/bytecode_official" class="social-link" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/bytecode_official" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://dzen.ru/bytecode_official" class="social-link" title="Дзен">
+                    <i class="fab fa-yandex"></i>
+                </a>
+                <a href="https://github.com/ByteCodeOfficial" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

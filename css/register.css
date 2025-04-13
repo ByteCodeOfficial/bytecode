@@ -1,0 +1,538 @@
+/* Стили для страницы регистрации */
+.register-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #0d0d0d;
+}
+
+.register-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.register-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #00bfff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    opacity: 0.6;
+}
+
+.register-particle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation: float 8s infinite ease-in-out;
+}
+.register-particle:nth-child(2) {
+    top: 70%;
+    left: 80%;
+    animation: float 10s infinite ease-in-out 2s;
+}
+.register-particle:nth-child(3) {
+    top: 40%;
+    left: 50%;
+    animation: float 12s infinite ease-in-out 1s;
+}
+.register-particle:nth-child(4) {
+    top: 80%;
+    left: 10%;
+    animation: float 9s infinite ease-in-out 3s;
+}
+.register-particle:nth-child(5) {
+    top: 20%;
+    left: 90%;
+    animation: float 11s infinite ease-in-out 4s;
+}
+
+.register-form {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.2);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.register-form::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 191, 255, 0.05), transparent);
+    animation: shine 6s infinite linear;
+    z-index: -1;
+}
+
+.register-form__header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.register-form__title {
+    font-size: 36px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.register-form__title span {
+    color: #0077ff;
+    animation: colorChange 3s infinite alternate;
+}
+
+.register-form__subtitle {
+    font-size: 16px;
+    color: #00bfff;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.register-form__progress {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.register-form__progress-step {
+    width: 30px;
+    height: 5px;
+    background-color: rgba(0, 191, 255, 0.3);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.register-form__progress-step.active {
+    background-color: #00bfff;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.register-form__container {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.register-form__container.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    color: #00bfff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 20px 15px 45px;
+    background-color: rgba(0, 191, 255, 0.05);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    color: #00bfff;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00bfff;
+    font-size: 16px;
+}
+
+.input-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00bfff;
+    transition: width 0.3s ease;
+}
+
+.form-input:focus ~ .input-border {
+    width: 100%;
+}
+
+.password-strength {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strength-bar {
+    height: 5px;
+    flex-grow: 1;
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.strength-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #ff0000;
+    transition: all 0.3s ease;
+}
+
+.strength-text {
+    font-size: 12px;
+    color: #ff0000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-input:valid ~ .password-strength .strength-bar::after {
+    width: 60%;
+    background-color: #ffcc00;
+}
+
+.form-input:valid ~ .password-strength .strength-text {
+    color: #ffcc00;
+}
+
+.form-input:valid:not(:placeholder-shown) ~ .password-strength .strength-bar::after {
+    width: 100%;
+    background-color: #00ff00;
+}
+
+.form-input:valid:not(:placeholder-shown) ~ .password-strength .strength-text {
+    color: #00ff00;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.interest-option {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.interest-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.interest-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: rgba(0, 191, 255, 0.05);
+    border: 1px solid rgba(0, 191, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.interest-icon {
+    margin-right: 10px;
+    color: #00bfff;
+    font-size: 16px;
+}
+
+.interest-text {
+    color: #00bfff;
+    font-size: 14px;
+}
+
+.interest-option:hover .interest-checkbox {
+    background-color: rgba(0, 191, 255, 0.1);
+    border-color: #00bfff;
+}
+
+.interest-option input:checked ~ .interest-checkbox {
+    background-color: rgba(0, 191, 255, 0.2);
+    border-color: #00bfff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn-prev, .btn-next, .btn-submit {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-prev {
+    background-color: transparent;
+    color: #00bfff;
+    border: 2px solid #00bfff;
+}
+
+.btn-prev:hover {
+    background-color: rgba(0, 191, 255, 0.1);
+}
+
+.btn-next, .btn-submit {
+    background: linear-gradient(145deg, #00bfff, #0077ff);
+    color: #0d0d0d;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+.btn-next:hover, .btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+}
+
+.form-footer, .resend-code {
+    text-align: center;
+    margin-top: 30px;
+    color: #00bfff;
+    font-size: 14px;
+}
+
+.form-link {
+    color: #0077ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-link:hover {
+    color: #00bfff;
+    text-decoration: underline;
+}
+
+.verification-icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verification-icon i {
+    font-size: 40px;
+    color: #00bfff;
+    z-index: 2;
+}
+
+.verification-circle {
+    position: absolute;
+    border: 2px solid #00bfff;
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-out;
+}
+
+.verification-circle:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    opacity: 0.6;
+}
+
+.verification-circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    opacity: 0.3;
+}
+
+.verification-title {
+    text-align: center;
+    font-size: 24px;
+    color: #00bfff;
+    margin-bottom: 15px;
+}
+
+.verification-text {
+    text-align: center;
+    color: #00bfff;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 191, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    color: #00bfff;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.success-message h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: #00bfff;
+    margin-bottom: 30px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeInOut 3s forwards;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0); opacity: 0; }
+    80% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.register-form {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.strength-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--strength-width, 0%);
+    background-color: var(--strength-color, #ff0000);
+    transition: all 0.3s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 30px 20px;
+    }
+    
+    .register-form__title {
+        font-size: 28px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-prev, .btn-next, .btn-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-form {
+        padding: 25px 15px;
+    }
+    
+    .register-form__title {
+        font-size: 24px;
+    }
+    
+    .form-input {
+        padding: 12px 15px 12px 40px;
+    }
+    
+    .input-icon {
+        font-size: 14px;
+    }
+}

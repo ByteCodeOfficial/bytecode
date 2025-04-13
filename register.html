@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="register.html" class="btn btn-register active">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Бургер-меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <a href="404.html">IT-новости</a>
+            <a href="404.html">Видеоуроки</a>
+            <a href="404.html">Магазин</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="login.html" class="btn btn-login">Вход</a>
+            <a href="register.html" class="btn btn-register">Регистрация</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="register-content">
+        <!-- Анимированный фон -->
+        <div class="register-bg">
+            <div class="register-particle"></div>
+            <div class="register-particle"></div>
+            <div class="register-particle"></div>
+            <div class="register-particle"></div>
+            <div class="register-particle"></div>
+        </div>
+        
+        <!-- Форма регистрации -->
+        <section class="register-form">
+            <div class="register-form__header">
+                <h1 class="register-form__title">Создать <span>аккаунт</span></h1>
+                <p class="register-form__subtitle">Присоединяйся к IT-революции!</p>
+                <div class="register-form__progress">
+                    <div class="register-form__progress-step active" data-step="1"></div>
+                    <div class="register-form__progress-step" data-step="2"></div>
+                    <div class="register-form__progress-step" data-step="3"></div>
+                </div>
+            </div>
+
+            <!-- Шаг 1: Основная информация -->
+            <form class="register-form__container active" data-step="1">
+                <div class="form-group">
+                    <label for="username" class="form-label">Имя пользователя</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="username" name="username" class="form-input" required>
+                        <i class="fas fa-user input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" class="form-input" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Пароль</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" class="form-input" required>
+                        <i class="fas fa-lock input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Слабый</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Подтвердите пароль</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-input" required>
+                        <i class="fas fa-lock input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-next" data-next="2">Далее <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="form-footer">
+                    <p>Уже есть аккаунт? <a href="login.html" class="form-link">Войти</a></p>
+                </div>
+            </form>
+
+            <!-- Шаг 2: Дополнительная информация -->
+            <form class="register-form__container" data-step="2">
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Полное имя</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="fullname" name="fullname" class="form-input">
+                        <i class="fas fa-id-card input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate" class="form-label">Дата рождения</label>
+                    <div class="input-wrapper">
+                        <input type="date" id="birthdate" name="birthdate" class="form-input">
+                        <i class="fas fa-calendar input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Интересы (выберите до 3)</label>
+                    <div class="interests-grid">
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="web">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-code interest-icon"></i>
+                                <span class="interest-text">Web-разработка</span>
+                            </span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="ai">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-robot interest-icon"></i>
+                                <span class="interest-text">Искусственный интеллект</span>
+                            </span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="game">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-gamepad interest-icon"></i>
+                                <span class="interest-text">Разработка игр</span>
+                            </span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="mobile">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-mobile-alt interest-icon"></i>
+                                <span class="interest-text">Мобильная разработка</span>
+                            </span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="data">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-database interest-icon"></i>
+                                <span class="interest-text">Анализ данных</span>
+                            </span>
+                        </label>
+                        <label class="interest-option">
+                            <input type="checkbox" name="interests" value="design">
+                            <span class="interest-checkbox">
+                                <i class="fas fa-paint-brush interest-icon"></i>
+                                <span class="interest-text">Дизайн</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-prev" data-prev="1"><i class="fas fa-arrow-left"></i> Назад</button>
+                    <button type="button" class="btn btn-next" data-next="3">Далее <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+
+            <!-- Шаг 3: Подтверждение -->
+            <form class="register-form__container" data-step="3">
+                <div class="verification-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <div class="verification-circle"></div>
+                    <div class="verification-circle"></div>
+                </div>
+                
+                <h2 class="verification-title">Почти готово!</h2>
+                <p class="verification-text">На ваш email отправлено письмо с подтверждением. Пожалуйста, проверьте вашу почту и перейдите по ссылке для завершения регистрации.</p>
+                
+                <div class="form-group">
+                    <label for="verification-code" class="form-label">Код подтверждения</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="verification-code" name="verification-code" class="form-input" placeholder="Введите код из письма">
+                        <i class="fas fa-key input-icon"></i>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-prev" data-prev="2"><i class="fas fa-arrow-left"></i> Назад</button>
+                    <button type="submit" class="btn btn-submit">Завершить регистрацию</button>
+                </div>
+
+                <div class="resend-code">
+                    <p>Не получили письмо? <a href="#" class="form-link">Отправить повторно</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="ByteCode Logo">
+                    <span>ByteCode</span>
+                </a>
+            </div>
+            <button class="footer__scroll-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer__center">
+            <h3>Информация</h3>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__right">
+            <h3>Социальные сети</h3>
+            <div class="footer__socials">
+                <a href="https://vk.com/bytecode_official" class="social-link" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/bytecode_official" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://dzen.ru/bytecode_official" class="social-link" title="Дзен">
+                    <i class="fab fa-yandex"></i>
+                </a>
+                <a href="https://github.com/ByteCodeOfficial" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>
