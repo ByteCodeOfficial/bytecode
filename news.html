@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-новости | ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="register.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+    
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+            </a>
+        </div>
+        <div class="navbar__links" id="navbar-links">
+            <a href="news.html" class="active">IT-новости</a>
+            <a href="tutorials.html">Видеоуроки</a>
+            <a href="shop.html">Магазин</a>
+        </div>
+    </nav>
+    
+    <!-- Бургер-меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <a href="news.html" class="active">IT-новости</a>
+            <a href="tutorials.html">Видеоуроки</a>
+            <a href="shop.html">Магазин</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="login.html" class="btn btn-login">Вход</a>
+            <a href="register.html" class="btn btn-register">Регистрация</a>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="content">
+        <!-- Hero-блок для новостей -->
+        <section class="news-hero">
+            <div class="news-hero__content">
+                <h1 class="news-hero__title">IT-новости</h1>
+                <p class="news-hero__description">
+                    Будьте в курсе последних событий в мире технологий, программирования и инноваций
+                </p>
+                <div class="news-hero__search">
+                    <input type="text" placeholder="Поиск новостей...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Фильтры новостей -->
+        <section class="news-filters">
+            <div class="news-filters__container">
+                <button class="news-filter active" data-category="all">Все новости</button>
+                <button class="news-filter" data-category="ai">Искусственный интеллект</button>
+                <button class="news-filter" data-category="web">Веб-разработка</button>
+                <button class="news-filter" data-category="mobile">Мобильные технологии</button>
+                <button class="news-filter" data-category="hardware">Железо</button>
+                <button class="news-filter" data-category="security">Кибербезопасность</button>
+            </div>
+        </section>
+
+        <!-- Основной контент новостей -->
+        <section class="news-main">
+            <div class="news-grid">
+                <!-- Новость 1 -->
+                <article class="news-card" data-category="ai">
+                    <div class="news-card-image">
+                        <img src="https://techcrunch.com/wp-content/uploads/2023/03/GettyImages-1249199030.jpg" alt="ИИ в медицине">
+                        <span class="news-card-category">Искусственный интеллект</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-15"><i class="far fa-calendar-alt"></i> 15 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">ИИ научился диагностировать редкие заболевания с точностью 98%</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            Новый алгоритм на основе глубокого обучения способен выявлять редкие генетические заболевания, анализируя медицинские снимки...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.2K</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 34</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Новость 2 -->
+                <article class="news-card" data-category="web">
+                    <div class="news-card-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/9QTpESGBXa32D29J77VR3d.jpg" alt="Новый фреймворк">
+                        <span class="news-card-category">Веб-разработка</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-14"><i class="far fa-calendar-alt"></i> 14 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">Вышел новый фреймворк для фронтенд-разработки</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            Компания ByteTech представила фреймворк NovaJS, который обещает революцию в создании пользовательских интерфейсов...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 890</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 21</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Новость 3 -->
+                <article class="news-card" data-category="mobile">
+                    <div class="news-card-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/3moYxQdXWYvZyoYxTUTW6H.jpg" alt="Новый смартфон">
+                        <span class="news-card-category">Мобильные технологии</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-13"><i class="far fa-calendar-alt"></i> 13 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">Представлен флагманский смартфон с революционной камерой</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            Компания Quantum Mobile анонсировала новый флагман с камерой 200 МП и процессором на базе ИИ для обработки изображений...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.5K</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 42</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Новость 4 -->
+                <article class="news-card" data-category="hardware">
+                    <div class="news-card-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/vEcELHdn998wDcBw6W7Kk6.jpg" alt="Новый процессор">
+                        <span class="news-card-category">Железо</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-12"><i class="far fa-calendar-alt"></i> 12 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">Новый процессор от TechCore бьет рекорды производительности</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            Процессор Quantum XT показал на 40% лучшую производительность в тестах по сравнению с предыдущим поколением...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 2.1K</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 56</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Новость 5 -->
+                <article class="news-card" data-category="security">
+                    <div class="news-card-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/5m4KJYH9eDVQYotdEdXUoF.jpg" alt="Кибербезопасность">
+                        <span class="news-card-category">Кибербезопасность</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-11"><i class="far fa-calendar-alt"></i> 11 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">Обнаружена уязвимость в популярном VPN-сервисе</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            Исследователи безопасности обнаружили критическую уязвимость, позволяющую перехватывать трафик пользователей...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.8K</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 38</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Новость 6 -->
+                <article class="news-card" data-category="ai">
+                    <div class="news-card-image">
+                        <img src="https://techcrunch.com/wp-content/uploads/2023/03/GettyImages-1249199030.jpg" alt="ИИ в образовании">
+                        <span class="news-card-category">Искусственный интеллект</span>
+                    </div>
+                    <div class="news-card-content">
+                        <time class="news-card-date" datetime="2023-11-10"><i class="far fa-calendar-alt"></i> 10 ноября 2023</time>
+                        <h3 class="news-card-title">
+                            <a href="news-single.html">ИИ-ассистенты заменят репетиторов к 2025 году</a>
+                        </h3>
+                        <p class="news-card-excerpt">
+                            По прогнозам аналитиков, персонализированные ИИ-ассистенты смогут полностью заменить репетиторов по основным предметам...
+                        </p>
+                        <div class="news-card-footer">
+                            <span class="news-card-views"><i class="far fa-eye"></i> 1.3K</span>
+                            <span class="news-card-comments"><i class="far fa-comment"></i> 29</span>
+                            <a href="news-single.html" class="news-card-read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Пагинация -->
+            <div class="news-pagination">
+                <button class="news-pagination__button active">1</button>
+                <button class="news-pagination__button">2</button>
+                <button class="news-pagination__button">3</button>
+                <button class="news-pagination__button"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Подписка на новости -->
+        <section class="news-subscribe">
+            <div class="news-subscribe__container">
+                <h2 class="news-subscribe__title">Подписаться на новости</h2>
+                <p class="news-subscribe__description">
+                    Получайте самые свежие IT-новости прямо на вашу почту
+                </p>
+                <form class="news-subscribe__form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="ByteCode Logo">
+                    <span>ByteCode</span>
+                </a>
+            </div>
+            <button class="footer__scroll-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer__center">
+            <h3>Информация</h3>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+        </div>
+        <div class="footer__right">
+            <h3>Социальные сети</h3>
+            <div class="footer__socials">
+                <a href="https://vk.com/bytecode_official" class="social-link" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://t.me/bytecode_official" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://dzen.ru/bytecode_official" class="social-link" title="Дзен">
+                    <i class="fab fa-yandex"></i>
+                </a>
+                <a href="https://github.com/ByteCodeOfficial" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>
