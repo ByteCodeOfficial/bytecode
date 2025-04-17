@@ -3100,3 +3100,269 @@ main {
         width: 60px;
     }
 }
+/* Раздел Видеоуроки - улучшенные стили */
+.tutorials {
+    padding: 80px 20px;
+    background-color: #0d0d0d;
+    position: relative;
+    overflow: hidden;
+}
+
+.tutorials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.1), transparent);
+    animation: shine 5s infinite;
+}
+
+.tutorials__header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tutorials__title {
+    font-size: 48px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.tutorials__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #00bfff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+.tutorials__description {
+    font-size: 18px;
+    color: #00bfff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.tutorials__playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.tutorials__playlist {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorials__playlist:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 191, 255, 0.4);
+}
+
+.tutorials__image {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.tutorials__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tutorials__playlist:hover .tutorials__image img {
+    transform: scale(1.1);
+}
+
+.tutorials__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 191, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tutorials__play-button i {
+    color: #0d0d0d;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.tutorials__playlist:hover .tutorials__play-button {
+    opacity: 1;
+}
+
+.tutorials__info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tutorials__playlist-title {
+    font-size: 22px;
+    color: #00bfff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.tutorials__playlist-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tutorials__playlist-title a:hover {
+    color: #0077ff;
+}
+
+.tutorials__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #00bfff;
+}
+
+.tutorials__meta i {
+    margin-right: 5px;
+}
+
+.tutorials__difficulty {
+    margin-bottom: 15px;
+}
+
+.difficulty-beginner {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(0, 191, 255, 0.2);
+    color: #00bfff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.difficulty-intermediate {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.difficulty-advanced {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff0000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.tutorials__author {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 191, 255, 0.1);
+}
+
+.tutorials__author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.tutorials__author-name {
+    font-size: 14px;
+    color: #00bfff;
+    opacity: 0.8;
+}
+
+.tutorials__footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tutorials__button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(145deg, #00bfff, #0077ff);
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorials__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+}
+
+/* Адаптивность для раздела Видеоуроки */
+@media (max-width: 768px) {
+    .tutorials__title {
+        font-size: 36px;
+    }
+    
+    .tutorials__description {
+        font-size: 16px;
+    }
+    
+    .tutorials__playlists {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorials__playlist-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutorials__title {
+        font-size: 30px;
+    }
+    
+    .tutorials__title::after {
+        width: 60px;
+        bottom: -10px;
+    }
+    
+    .tutorials__button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
