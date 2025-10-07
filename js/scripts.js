@@ -137,3 +137,29 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initAnimations();
 });
+// Debug кнопок в hero-секции
+document.addEventListener('DOMContentLoaded', function() {
+    const heroButtons = document.querySelectorAll('.hero-section .btn');
+    
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            console.log('Кнопка нажата:', this.textContent);
+            // Если страница не переходит, раскомментируйте следующую строку:
+            // window.location.href = this.href;
+        });
+        
+        // Добавляем стили для визуального отклика
+        button.style.cursor = 'pointer';
+        button.style.position = 'relative';
+        button.style.zIndex = '1000';
+    });
+    
+    // Проверяем, есть ли элементы поверх кнопок
+    const heroRect = document.querySelector('.hero-section').getBoundingClientRect();
+    const buttons = document.querySelectorAll('.hero-section .btn');
+    
+    buttons.forEach(button => {
+        const buttonRect = button.getBoundingClientRect();
+        console.log('Позиция кнопки:', buttonRect);
+    });
+});
