@@ -2260,8 +2260,8 @@ footer .logo-text {
 }
 
 .social-boosty:hover {
-    background: linear-gradient(145deg, #ff6b6b, #ff5252);
-    border-color: #ff6b6b;
+    background: linear-gradient(145deg, #ffbf6b, #ff9252);
+    border-color: #ffa16b;
 }
 
 .social-boosty:hover .social-icon i {
